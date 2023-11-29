@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Campo from './componentes/campo.js';
+import { Button } from 'reactstrap';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      campo:[["00","01","02"],["10","11","12"],["20","21","22"]],
+      minas:0,
+      filas:0,
+      columnas:0,
+    }
+  }
+  render(){
+    return (
+      <div className="App">
+        <Campo></Campo>
+      </div>
+    );
+  }
 }
 
 export default App;
