@@ -1,10 +1,17 @@
 import React from 'react';
-import { Button } from 'reactstrap';
+import { Button,Row,Col } from 'reactstrap';
 
-const Campo = (props)=>{
-    let field = [[0,1],[2,3]];
-    
-    return(console.log({field}));
+const Campo = (props) => {
+    let tabla=[]
+    for (let i = 0; i < props.campo.length; i++) {
+        let fila = []
+        for (let j = 0; j < props.campo[i].length; j++) {
+            fila.push(<Button>XXX</Button>)
+        }
+        tabla.push(<Row><Col>{fila}</Col></Row>)
+    }
+
+    return (tabla);
 }
 
 export default Campo;
